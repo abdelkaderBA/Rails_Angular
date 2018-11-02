@@ -24,3 +24,13 @@ app.controller('EventsCtrl', ['$scope', function ($scope) {
 
     ];
 }]);
+
+/* app.controller('EventsCtrl', function ($scope, $http) {
+  $http({
+    method: 'GET',
+    url: './employees.json'
+  }).then(function (response) {
+    $scope.events = response;
+  }, function (error) {
+  });
+}); */
