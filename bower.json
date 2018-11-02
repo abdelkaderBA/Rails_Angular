@@ -1,0 +1,21 @@
+{
+  "name": "Rails_Angular",
+  "description": "Test Technique Rails_Angular",
+  "main": "",
+  "authors": [
+    "abdelkaderBA <abdelkader.benaicha7@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/abdelkaderBA/Rails_Angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.5",
+    "bootstrap": "^4.1.3"
+  }
+}
