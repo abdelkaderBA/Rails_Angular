@@ -1,1 +1,45 @@
 
+<div class="container">
+   <div ng-controller="EventsCtrl">
+      <div class="row">
+         <div class="col-md-4">
+         <%# search zone %>
+            <form>
+               <div class="form-group">
+                  <div class="input-group">
+                     <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                     <input type="text" id="search" class="form-control" ng-model="search" placeholder="search" />
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="row">
+      <%# table bootstrap %>
+         <div class="col-md-12 table-responsive">
+            <table class="table">
+               <thead class="thead-dark">
+                  <tr>
+                     <th>Salarié</th>
+                     <th>Date début</th>
+                     <th>Date fin</th>
+                     <th>Action / ETAT</th>
+                  </tr>
+               </thead>
+               <tbody>
+               <%# get data from controller with ng-repeat directive %>
+                  <tr ng-repeat="event in events | filter : search">
+                     <td>{{event.name}}</td>
+                     <td>{{event.startDate}}</td>
+                     <td>{{event.endDate}}</td>
+                     <td>
+                        <button type="button" class="btn btn-success" ng-click="validate()">Valider</button>
+                        <button type="button" class="btn btn-danger" ng-click="reject()">Rejeter</button>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+</div>
